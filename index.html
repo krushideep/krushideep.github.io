@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Krushi Deep</title>
 
-  <meta name="description" content="FPGA Engineer · Minimalist · Builder exploring AI, home automation, and systems thinking." />
+  <meta name="description" content="FPGA engineer working on precision systems. Interested in building simple, practical systems." />
 
-  <!-- Optional: Elegant font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -18,30 +17,6 @@
       --muted: #64748b;
       --accent: #2563eb;
       --border: #e5e7eb;
-      --bg-soft: #f8fafc;
-    }
-
-    .socials {
-      margin-top: 1.6rem;
-      display: flex;
-      gap: 1.2rem;
-      align-items: center;
-    }
-    
-    .socials a {
-      display: inline-flex;
-      align-items: center;
-      color: var(--muted);
-      transition: color 0.2s ease;
-    }
-    
-    .socials a:hover {
-      color: var(--accent);
-    }
-    
-    .socials svg {
-      width: 20px;
-      height: 20px;
     }
 
     * {
@@ -51,99 +26,122 @@
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
+    html, body {
+      height: 100%;
+    }
+
     body {
+      display: flex;
+      flex-direction: column;
       background: #ffffff;
       color: var(--text);
-      line-height: 1.7;
-      font-size: 16px;
+      line-height: 1.65;
+      font-size: clamp(15px, 1.1vw, 17px);
     }
 
     a {
       color: var(--accent);
       text-decoration: none;
-      border-bottom: 1px solid transparent;
     }
 
     a:hover {
-      border-bottom: 1px solid var(--accent);
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
     }
 
     .container {
-      max-width: 760px;
+      max-width: 92ch;
       margin: auto;
-      padding: 5rem 1.5rem;
+      padding: clamp(2.5rem, 6vw, 5rem) clamp(1.2rem, 4vw, 2rem);
     }
 
     header {
-      margin-bottom: 5rem;
+      margin-bottom: clamp(2.4rem, 6vw, 3.2rem);
     }
 
     header h1 {
-      font-size: 2.4rem;
+      font-size: clamp(2rem, 4vw, 2.6rem);
       font-weight: 600;
       letter-spacing: -0.02em;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.4rem;
     }
 
     header p {
       color: var(--muted);
-      font-size: 1.1rem;
+      max-width: 65ch;
     }
 
     .links {
-      margin-top: 1.5rem;
+      margin-top: 1.4rem;
       display: flex;
-      gap: 1.4rem;
       flex-wrap: wrap;
+      gap: 1.2rem;
       font-size: 0.95rem;
+    }
+
+    .links a {
+      color: var(--muted);
+    }
+
+    .links a:hover {
+      color: var(--accent);
     }
 
     section {
-      margin-bottom: 4.5rem;
+      margin-bottom: clamp(2.2rem, 6vw, 2.8rem);
     }
 
     section h2 {
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 1.2rem;
+      margin-bottom: 0.8rem;
     }
 
     section p {
-      margin-bottom: 1.2rem;
-      max-width: 65ch;
+      max-width: 68ch;
+      margin-bottom: 0.8rem;
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
+    /* Work Grid */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: clamp(1rem, 3vw, 1.4rem);
+      margin-top: 1rem;
     }
 
-    li {
-      margin-bottom: 1.6rem;
-      max-width: 65ch;
+    .work-card {
+      padding: 1.1rem;
+      border: 1px solid var(--border);
+      transition: border-color 0.15s ease, transform 0.15s ease;
     }
 
-    li strong {
-      font-weight: 500;
+    .work-card strong {
       display: block;
-      margin-bottom: 0.3rem;
+      font-weight: 500;
+      margin-bottom: 0.35rem;
     }
 
-    .project {
-      padding-left: 1rem;
-      border-left: 2px solid var(--border);
-    }
-
-    .project a {
+    .work-card span {
       font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .work-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
     }
 
     footer {
       border-top: 1px solid var(--border);
-      padding-top: 2.5rem;
+      padding: 2rem;
+      text-align: center;
       color: var(--muted);
       font-size: 0.85rem;
     }
@@ -151,88 +149,88 @@
 </head>
 
 <body>
-  <div class="container">
 
-    <header>
-      <h1>Krushi Deep</h1>
-      <p>Engineer · Builder · Traveler · AI Enthusiast ·</p>
+  <main>
+    <div class="container">
 
-      <div class="socials">
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/krushideep/" target="_blank" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM7.5 8h4.8v2.2h.1c.7-1.3 2.4-2.7 5-2.7 5.4 0 6.4 3.6 6.4 8.3V24h-5v-7.4c0-1.8 0-4.1-2.5-4.1s-2.9 2-2.9 4v7.5h-5V8z"/>
-          </svg>
-        </a>
-      
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/light_packer/" target="_blank" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.9a1.1 1.1 0 11-2.2 0 1.1 1.1 0 012.2 0z"/>
-          </svg>
-        </a>
-      
-        <!-- Email -->
-        <a href="mailto:your.email@example.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-          </svg>
-        </a>
-      </div>
+      <!-- Identity -->
+      <header>
+        <h1>Krushi Deep</h1>
+        <p>
+          I build systems and try to keep them simple.<br/>
+          <span style="font-size: 0.95em;">
+            By profession, I work as an FPGA engineer on precision systems.
+          </span>
+        </p>
 
-    </header>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/krushideep/" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/light_packer/" target="_blank">Travel</a>
+          <a href="mailto:your.email@example.com">Email</a>
+        </div>
+      </header>
 
-    <section>
-      <h2>About</h2>
-      <p>
-        I am an FPGA engineer focused on building efficient, low-latency systems
-        and simplifying complex engineering problems.
-      </p>
-      <p>
-        My philosophy is minimalism—clarity over cleverness, simplicity over
-        unnecessary complexity. This mindset guides how I design systems,
-        make decisions, and approach life.
-      </p>
-    </section>
+      <!-- Philosophy -->
+      <section>
+        <h2>Philosophy</h2>
+        <p>
+          I believe in minimalism—not as an aesthetic, but as a way of thinking.
+          Clarity over cleverness. Simple systems over unnecessary abstraction.
+        </p>
+        <p>
+          I’m drawn to problems where complexity has quietly crept in, and my
+          instinct is to remove friction rather than add layers.
+        </p>
+      </section>
 
-    <section>
-      <h2>Explorations</h2>
-      <p>
-        I enjoy exploring ideas where engineering, automation, and human-centered
-        design intersect.
-      </p>
-      <ul>
-        <li>AI-assisted development and prompt-driven workflows</li>
-        <li>Home automation using Home Assistant as a central brain</li>
-        <li>Product, business, and systems thinking</li>
-        <li>DIY projects and practical automation</li>
-      </ul>
-    </section>
+      <!-- Work -->
+      <section>
+        <h2>Work</h2>
+        <p>
+          Recent work that reflects how I think about building systems.
+        </p>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li class="project">
-          <strong>CalCraft</strong>
-          CalCraft helps you create personalized, print-ready calendars in minutes. Add your events, photos, and notes, customize the layout to match your style, and export with ease—no design skills required, and everything stays private in your browser.
-          <br/>
-          <a href="https://calcrafts.in" target="_blank">Create now→</a>
-        </li>
-      </ul>
-    </section>
+        <div class="work-grid">
+          <a class="work-card" href="https://github.com/krushideep/calcraft" target="_blank">
+            <strong>CalCraft</strong>
+            <span>
+              A simple, privacy-first tool for creating personalized, printable calendars.
+            </span>
+          </a>
+        </div>
 
-    <section>
-      <h2>Travel</h2>
-      <p>
-        I travel light, hike often, and prefer slow, intentional journeys.
-        Travel helps me reset and think clearly.
-      </p>
-    </section>
+        <p style="margin-top: 1rem;">
+          <a href="https://github.com/krushideep" target="_blank">
+            More projects on GitHub →
+          </a>
+        </p>
+      </section>
 
-    <footer>
-      © 2026 · Krushi Deep
-    </footer>
+      <!-- Explorations -->
+      <section>
+        <h2>Explorations</h2>
+        <p>
+          I explore AI-assisted workflows to reduce cognitive load, system-level
+          thinking applied to products and homes, and software that feels invisible
+          when it works.
+        </p>
+      </section>
 
-  </div>
+      <!-- Life -->
+      <section>
+        <h2>Life</h2>
+        <p>
+          I travel light, hike often, and prefer slow, intentional journeys.
+          Travel helps me reset and think clearly.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    © 2026 · Krushi Deep
+  </footer>
+
 </body>
 </html>
