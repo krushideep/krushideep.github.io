@@ -3,40 +3,196 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name</title>
+  <title>Krushi Deep</title>
+
+  <meta name="description" content="FPGA Engineer · Minimalist · Builder exploring AI, home automation, and systems thinking." />
+
+  <!-- Optional: Elegant font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --text: #0f172a;
+      --muted: #64748b;
+      --accent: #2563eb;
+      --border: #e5e7eb;
+      --bg-soft: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     body {
-      font-family: sans-serif;
-      max-width: 700px;
-      margin: 40px auto;
-      line-height: 1.6;
-      padding: 0 20px;
-      color: #333;
+      background: #ffffff;
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
     }
-    h1, h2 {
-      margin-top: 1.5em;
-    }
+
     a {
-      color: #0070f3;
+      color: var(--accent);
       text-decoration: none;
+      border-bottom: 1px solid transparent;
     }
+
     a:hover {
-      text-decoration: underline;
+      border-bottom: 1px solid var(--accent);
+    }
+
+    .container {
+      max-width: 760px;
+      margin: auto;
+      padding: 5rem 1.5rem;
+    }
+
+    header {
+      margin-bottom: 5rem;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .links {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1.4rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    section {
+      margin-bottom: 4.5rem;
+    }
+
+    section h2 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    section p {
+      margin-bottom: 1.2rem;
+      max-width: 65ch;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 1.6rem;
+      max-width: 65ch;
+    }
+
+    li strong {
+      font-weight: 500;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .project {
+      padding-left: 1rem;
+      border-left: 2px solid var(--border);
+    }
+
+    .project a {
+      font-size: 0.95rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 2.5rem;
+      color: var(--muted);
+      font-size: 0.85rem;
     }
   </style>
 </head>
+
 <body>
-  <h1>Your Name</h1>
-  <p>Hello! I'm a [Your Profession or Title]. I love building, learning, and sharing knowledge.</p>
+  <div class="container">
 
-  <h2>Projects</h2>
-  <ul>
-    <li><strong>Day1 calcraft:</strong> Print a personalized calender with your imported ICS events in lessthan 5 mins <a href="/calcraft">calcraft</a></li>
-    <li><strong>Project Two:</strong> Another description with <a href="#">link</a></li>
-  </ul>
+    <header>
+      <h1>Krushi Deep</h1>
+      <p>FPGA Engineer · Minimalist · Builder</p>
 
-  <h2>Contact</h2>
-  <p>Email: you@example.com</p>
-  <p>GitHub: <a href="https://github.com/yourhandle">yourhandle</a></p>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/krushideep/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/light_packer/" target="_blank">Travel</a>
+        <a href="https://www.instagram.com/krushideep/" target="_blank">Personal</a>
+        <a href="mailto:krushideep@gmail.com">Email</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <p>
+        I am an FPGA engineer focused on building efficient, low-latency systems
+        and simplifying complex engineering problems.
+      </p>
+      <p>
+        My philosophy is minimalism—clarity over cleverness, simplicity over
+        unnecessary complexity. This mindset guides how I design systems,
+        make decisions, and approach life.
+      </p>
+    </section>
+
+    <section>
+      <h2>Explorations</h2>
+      <p>
+        I enjoy exploring ideas where engineering, automation, and human-centered
+        design intersect.
+      </p>
+      <ul>
+        <li>AI-assisted development and prompt-driven workflows</li>
+        <li>Home automation using Home Assistant as a central brain</li>
+        <li>Product, business, and systems thinking</li>
+        <li>DIY projects and practical automation</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li class="project">
+          <strong>CalCraft</strong>
+          CalCraft helps you create personalized, print-ready calendars in minutes. Add your events, photos, and notes, customize the layout to match your style, and export with ease—no design skills required, and everything stays private in your browser.
+          <br/>
+          <a href="https://calcrafts.in" target="_blank">Create now→</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Travel</h2>
+      <p>
+        I travel light, hike often, and prefer slow, intentional journeys.
+        Travel helps me reset and think clearly.
+      </p>
+    </section>
+
+    <footer>
+      © 2026 · Krushi Deep
+    </footer>
+
+  </div>
 </body>
 </html>
